@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // "typeRoots": [], /* Specify multiple folders that act like './node_modules/@types'. */,
+    "lib": ["dom", "dom.iterable", "esnext"], // include type checking process; we have chosen to use the types for the browser’s DOM and the latest version of ECMAScript.
+    "allowJs": true, // Whether to allow JavaScript files to be compiled.
+    "allowSyntheticDefaultImports": true, // allows default imports from modules with no default export in the type checking process.
+    "skipLibCheck": true, // Whether to skip type checking of all the type declaration files (*.d.ts).
+    "esModuleInterop": true, // This enables compatibility with Babel.
+    "strict": true, // the project is said to be running in strict mode.
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true, // allows modules to be in .json files which are useful for configuration files.
+    "noEmit": true, // Whether to suppress TypeScript generated code during the compilation process. This is true in our project because Babel will be generating the JavaScript code.
+    "jsx": "react", // Whether to support JSX in .tsx files.
+    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": ["src"] //  files and folders for TypeScript to check
+}
