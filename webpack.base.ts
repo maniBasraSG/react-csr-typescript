@@ -1,6 +1,7 @@
 import 'dotenv/config';
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -75,6 +76,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+    }),
+    new CopyPlugin({
+      patterns: [{ from: './src/assets/', to: '' }],
     }),
     new ForkTsCheckerWebpackPlugin({
       async: false,

@@ -1,7 +1,11 @@
 import React from 'react';
 
 const About: React.FC = () => {
-  return <div className="bg-color">About</div>;
+  return (
+    <div className="bg-color">
+      <h1>About</h1>
+    </div>
+  );
 };
 
 export default About;
