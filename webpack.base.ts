@@ -6,6 +6,7 @@ import ESLintPlugin from 'eslint-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 const scriptExtensions = /\.(tsx|ts|js|jsx|mjs)$/;
 const imageExtensions = /\.(bmp|gif|jpg|jpeg|png)$/;
@@ -16,6 +17,9 @@ const devMode = process.env.MODE === 'development';
 
 const config = {
   resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src/'),
+    },
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.scss'],
   },
   module: {

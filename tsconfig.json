@@ -16,11 +16,11 @@
       "./node_modules/@types",
       "./src/types"
     ] /* Specify multiple folders that act like './node_modules/@types'. */,
-    "noImplicitAny": true
-  },
-  "baseUrl": ".",
-  "paths": {
-    "@/*": ["src/*"]
+    "noImplicitAny": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
   "include": ["src"] //  files and folders for TypeScript to check
 }
